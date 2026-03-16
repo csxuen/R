@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Events Admin Page - Review Video</title>
+
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <div class = "topBar">
+        <button class = "hamburger" aria-label="Toggle menu">☰</button>
+        <img class = "logo" src="logo.png" alt="Website Logo">
+        
+        <div class = "rightSide">
+            <img class = "notification" src="notification.png" alt="Notification icon">
+            <a href="Profile.html">
+                <img class = "profile" src="profile.png" alt="Profile icon">
+            </a>
+            <p>Logout</p>
+        </div>
+    </div>
+
+    <div class = "container">
+        <aside class = "sideBar">
+            <button class = "closeSideBar">&times;</button>
+            <!-- Later need to change to other html -->
+            <a href="PointsDistribution.html">Dashboard</a>
+            <a href="PointsDistribution.html">Event Approval</a>
+            <a href="PointsDistribution.html">User Management</a>
+            <a href="PointsDistribution.html">Waste Report</a>
+            <a href="PointsDistribution.html">Points Distribution</a>
+            <a href="OrganizerApproval.html">Event Organizer Approval</a>
+        </aside>
+    
+
+        <div class = "firstContent">
+            <div class = "backContent">
+                <a href="VideoApproval1.html">
+                    <img class = "backIcon" src="turn-back.png" alt="Back icon"><span>Back</span>
+                </a>
+            </div>
+            <h1>Review Video for Approval</h1>
+            <br>
+            <div class = "reviewVideo">
+                <div class = "reviewVideoHeader">
+                    <h2>Review Video</h2>
+                </div>
+
+                <div class = "reviewInfo">
+                    <p><strong>Title: </strong>Tree Planting</p>
+                    <p><strong>Participant: </strong><span>Nick</span></p>
+                    <p><strong>Submission Date: </strong><span>15 Oct 2025</span></p>
+                </div>
+
+                <hr>
+
+                <div class = "videoContainer">
+                    <!-- The video will put here -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bJDHtMXdVsA?si=AAWDhF680ocdigcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <hr>
+
+                <div class = "reviewActions">
+                    <button class = "approveButton">Approve</button>
+                    <button class = "rejectButton">Reject</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const menuButton = document.querySelector('.hamburger');
+    const sideBar = document.querySelector('.sideBar');
+
+    menuButton.addEventListener('click', () => {
+        sideBar.classList.toggle('active');
+    });
+
+    const closeButton = document.querySelector('.closeSideBar');
+
+    closeButton.addEventListener('click', () => {
+        sideBar.classList.remove('active');
+    })
+</script>
+
+</html>
